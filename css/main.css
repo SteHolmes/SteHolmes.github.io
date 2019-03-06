@@ -13,7 +13,7 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0 auto;
-	font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 100%;
 }
 
@@ -87,8 +87,12 @@ nav {
   transition: all 0.3s;
 }
 
+.navbar {
+  padding: 0 50px;
+}
+
 .navbar a {
-	margin: 10px 10px;
+  margin: 10px 10px;
 }
 
 .navbar-brand {
@@ -119,7 +123,7 @@ nav {
   position: absolute;
   width: 90%;
   height: 90%;
-  top: 80px;
+  top: 60px;
   left: 5%;
   background-image: url("../images/portfolio-hero-image.png");
   background-position: center center;
@@ -128,16 +132,28 @@ nav {
 }
 
 header.masthead {
-	position: relative;
-  padding-top: 12rem;
+  position: relative;
+  padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
   z-index: 1;
 }
 
 header.masthead .main-title {
-  margin: 20px;
+  width: 90%;
   padding: 30px 20px 10px 20px;
+  margin: auto;
   border: 1px solid #000;
+  transform: scaleX(0);
+  animation: expand 0.6s linear 0.3s forwards;
+}
+
+@keyframes expand {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
 }
 
 header.masthead h1 {
@@ -150,8 +166,46 @@ header.masthead h3 {
   text-transform: uppercase;
 }
 
+.main-title h1, h3 {
+  opacity: 0;
+  animation: fade-in 1.2s linear 1.2s forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 header.masthead p {
   font-weight: 300;
+}
+
+.line {
+  width: 0;
+  height: 265px;
+  border-left: 1px solid black;
+  position: absolute;
+  top: 100%;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0px auto;
+  transform: scaleY(0);
+  transform-origin: top;
+  animation: draw 0.6s linear 0.5s forwards;
+}
+
+@keyframes draw {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 @media (min-width: 768px) {
@@ -179,7 +233,7 @@ header.masthead p {
 /* CONTENT SECTIONS */
 
 .content-panel {
-	position: relative;
+  position: relative;
   padding: 5rem;
 }
 
@@ -211,7 +265,18 @@ section.about {
   background-color: #fff;
 }
 
-section.about .content-border {
+section.about.content-panel {
+  position: relative;
+  padding-bottom: 0;
+}
+
+/* EXPERIENCE SECTION */
+
+section.experience {
+  background-color: #fff;
+}
+
+section.experience .content-border {
   position: absolute;
   border: 1px solid #fff;
   left: 100px;
@@ -221,18 +286,18 @@ section.about .content-border {
   z-index: 1;
 }
 
-section.about .about-text {
+section.experience .experience-text {
   background-color: #FCB830;
   color: #fff;
   margin: 0;
   padding: 80px;
 }
 
-section.about .profile {
+section.experience .profile {
   padding: 0;
 }
 
-section.about .profile-photo {
+section.experience .profile-photo {
   background-image: url("https://images.unsplash.com/photo-1455596120412-30a2e6c8e600?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
   background-position: center center;
   background-size: cover;
@@ -248,8 +313,9 @@ section.about .profile-photo {
 /* FOOTER */
 
 footer {
-  background-color: #EDEAE5;
+  background-color: #fff;
   padding: 2rem;
+  border-top: 1px solid #e5e5e5;
 }
 
 footer i {
@@ -271,25 +337,25 @@ footer i {
     font-size: 0.9rem;
   }
 
-  section.about.content-panel {
+  section.experience.content-panel {
     padding: 2rem;
   }
 }
 
 @media (max-width: 700px) {
   
-  section.about.content-panel {
+  section.experience.content-panel {
     padding: 1rem;
   }
 
-  section.about .content-border {
+  section.experience .content-border {
     left: 10px;
     right: 10px;
     top: 30px;
     bottom: 30px;
   }
 
-  section.about .about-text {
+  section.experience .experience-text {
     padding: 40px;
   }
 }
