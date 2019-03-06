@@ -1,0 +1,90 @@
+.projects-gallery {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-gallery div.item {
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  background: #000000;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.projects-gallery div.item * {
+  box-sizing: border-box;
+}
+
+.projects-gallery div.item img {
+  max-width: 100%;
+  vertical-align: top;
+  height: 210px;
+}
+
+.projects-gallery div.item i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  font-size: 34px;
+  color: #000000;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background: #ffffff;
+}
+
+.projects-gallery div.item a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.projects-gallery div.item.purple {
+  background-color: #8A5373;
+}
+.projects-gallery div.item.purple i {
+  color: #8A5373;
+}
+
+.projects-gallery div.item.yellow {
+  background-color: #FCE181;
+}
+.projects-gallery div.item.yellow i {
+  color: #FCE181;
+}
+
+.projects-gallery div.item.aqua {
+  background-color: #30B9C1;
+}
+.projects-gallery div.item.aqua i {
+  color: #30B9C1;
+}
+
+.projects-gallery div.item:hover img {
+  opacity: 0.3;
+  filter: grayscale(100%);
+}
+
+.projects-gallery div.item * {
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.projects-gallery div.item i {
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.projects-gallery div.item:hover i {
+  transform: translate(-50%, -50%) scale(1);
+  transition: 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
