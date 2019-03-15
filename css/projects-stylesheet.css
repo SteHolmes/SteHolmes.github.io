@@ -1,6 +1,7 @@
 .projects-gallery {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .projects-gallery div.item {
@@ -87,4 +88,3 @@
   transform: translate(-50%, -50%) scale(1);
   transition: 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275); 
 }
-

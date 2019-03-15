@@ -361,3 +361,9 @@ footer i {
 }
 
 
+@media only screen and (max-width: 852px) {
+  .content-panel {
+    padding: 2rem;
+  }
+}
+
