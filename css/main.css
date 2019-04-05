@@ -310,6 +310,39 @@ section.experience .profile-photo {
 
 /* SKILLS SECTION */
 
+/* CONTACT SECTION */
+
+section.contact {
+  background-color: #EDEAE5;
+}
+
+section.contact .content-border {
+  position: absolute;
+  border: 1px solid #fff;
+  left: 100px;
+  top: 110px;
+  bottom: 110px;
+  right: 100px;
+  z-index: 1;
+}
+
+section.contact .contact-text {
+  background-color: #30B9C1;
+  color: #fff;
+  margin: 0;
+  padding: 80px;
+}
+
+section.contact .contact-form {
+  padding: 0;
+}
+
+section.contact .form-content {
+  background-color: #fff;
+  width: 100%;
+  height: 100%;
+}
+
 /* FOOTER */
 
 footer {
