@@ -29,10 +29,10 @@ $(document).ready(function(){
 
   $(window).scroll(function () { 
       if ($(window).scrollTop() > 1) {
-        $('nav').css({'background-color': '#fff', 'color': '#682d6a', 'box-shadow': '0px 1px 2px #bcbaba'});
+        $('nav').css({'box-shadow': '0px 1px 2px #bcbaba'});
       }
       if ($(window).scrollTop() < 2) {
-        $('nav').css({'background-color': 'transparent', 'color': '#fff', 'box-shadow': 'none'});
+        $('nav').css({'box-shadow': 'none'});
       }
   });
 

@@ -85,6 +85,7 @@ nav {
   z-index: 2;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-color: #ffffff;
 }
 
 .navbar {
@@ -125,10 +126,12 @@ nav {
   height: 90%;
   top: 60px;
   left: 5%;
-  background-image: url("../images/portfolio-hero-image.png");
-  background-position: center center;
+  background-image: url("../images/garden_aqua.jpg");
+  background-position: left top;
   background-repeat: no-repeat;
   z-index: -2;
+  opacity: 0;
+  animation: fade-in 1.2s linear 1.2s forwards;
 }
 
 header.masthead {
@@ -142,6 +145,7 @@ header.masthead .main-title {
   width: 90%;
   padding: 30px 20px 10px 20px;
   margin: auto;
+  color: #000;
   border: 1px solid #000;
   transform: scaleX(0);
   animation: expand 0.6s linear 0.3s forwards;
@@ -299,7 +303,7 @@ section.experience .profile {
 }
 
 section.experience .profile-photo {
-  background-image: url("https://images.unsplash.com/photo-1455596120412-30a2e6c8e600?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+  background-image: url("../images/golden_gate_bridge_cropped.jpg");
   background-position: center center;
   background-size: cover;
   width: 100%;
