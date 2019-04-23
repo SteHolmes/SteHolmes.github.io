@@ -60,8 +60,6 @@ i:hover {
   padding: 80px;
 }
 
-/* CUSTOM STYLES TO BOOTSTRAP CLASSES */ 
-
 .btn {
   position: relative;
   font-weight: 300;
@@ -132,7 +130,6 @@ nav {
 .nav-active {
   color: #EDEAE5;
 }
-
 
 /* HEADER/MASTHEAD SECTION */
 
@@ -284,7 +281,10 @@ section.experience .profile-photo {
 }
 
 
-/* PROJECTS SECTION */
+/* PROJECTS SECTION
+
+  Please refer to projects-stylesheet.css */
+
 
 /* SKILLS SECTION */
 
