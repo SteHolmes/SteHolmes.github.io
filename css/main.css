@@ -36,6 +36,28 @@ ul {
 
 i {
   color: #026670;
+  cursor: pointer;
+}
+
+i:hover {
+  opacity: 0.7
+  
+}
+
+.content-border {
+  position: absolute;
+  border: 1px solid #fff;
+  left: 100px;
+  top: 110px;
+  bottom: 110px;
+  right: 100px;
+  z-index: 1;
+}
+
+.txt-panel {
+  color: #fff;
+  margin: 0;
+  padding: 80px;
 }
 
 /* CUSTOM STYLES TO BOOTSTRAP CLASSES */ 
@@ -87,6 +109,13 @@ nav {
   padding: 2px 8px;
 }
 
+.navbar-brand .tagline {
+  font-size: 0.7em;
+  padding-left: 2px;
+  padding-bottom: 5px;
+  color: #026670;
+}
+
 .nav-link, .navbar-brand {
   -webkit-transition: color 0.5s; 
   transition: color 0.5s;
@@ -111,6 +140,7 @@ nav {
   position: absolute;
   width: 90%;
   height: 90%;
+  min-height: 600px;
   top: 60px;
   left: 5%;
   background-image: url("../images/garden_aqua.jpg");
@@ -125,6 +155,7 @@ header.masthead {
   position: relative;
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
+  min-height: 680px;
   z-index: 1;
 }
 
@@ -199,28 +230,6 @@ header.masthead p {
   }
 }
 
-@media (min-width: 768px) {
-  header.masthead p {
-    font-size: 1.15rem;
-  }
-}
-
-@media (min-width: 992px) {
-  header.masthead {
-    height: 100vh;
-    min-height: 650px;
-  }
-  header.masthead h1 {
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  header.masthead h1 {
-    font-size: 3rem;
-  }
-}
-
 /* CONTENT SECTIONS */
 
 .content-panel {
@@ -253,21 +262,8 @@ section.experience {
   background-color: #fff;
 }
 
-section.experience .content-border {
-  position: absolute;
-  border: 1px solid #fff;
-  left: 100px;
-  top: 110px;
-  bottom: 110px;
-  right: 100px;
-  z-index: 1;
-}
-
 section.experience .experience-text {
   font-size: 0.8em;
-  color: #fff;
-  margin: 0;
-  padding: 80px;
   z-index: 2;
 }
 
@@ -298,21 +294,16 @@ section.contact {
   background-color: #EDEAE5;
 }
 
-section.contact .content-border {
-  position: absolute;
-  border: 1px solid #fff;
-  left: 100px;
-  top: 110px;
-  bottom: 110px;
-  right: 100px;
-  z-index: 1;
+section.contact .contact-text {
+  z-index: 2;
 }
 
-section.contact .contact-text {
+section.contact .aqua-bg {
   background-color: #30B9C1;
-  color: #fff;
-  margin: 0;
-  padding: 80px;
+}
+
+section.contact i {
+  margin: 0 20px;
 }
 
 section.contact .contact-form {
@@ -351,9 +342,14 @@ section.contact .form-content textarea {
   padding: 5px;
 }
 
-section.contact .form-content button {
+section.contact .form-content .btn-primary {
   background-color: #30B9C1;
   color: #fff;
+  border: 1px solid #9A9A9A;
+}
+
+section.contact .form-content .btn-primary:hover {
+  border: 1px solid #30B9C1;
 }
 
 /* FOOTER */
@@ -374,27 +370,20 @@ footer i {
 
 /* MEDIA QUERIES */
 
-@media (max-width: 900px) {
-  h3,h4,h5,h6 {
-    font-size: 1.2rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-
-  section.experience.content-panel {
-    padding: 2rem;
-  }
-}
-
 @media (max-width: 700px) {
+  .hero-image {
+    background-position: top;
+  }
   
-  section.experience.content-panel {
+  .line {
+    height: 220px;
+  }
+  
+  .content-panel {
     padding: 1rem;
   }
 
-  section.experience .content-border {
+  .content-border {
     left: 10px;
     right: 10px;
     top: 30px;
@@ -406,10 +395,58 @@ footer i {
   }
 }
 
+@media (min-width: 768px) {
+  header.masthead p {
+    font-size: 1.15rem;
+  }
+  
+}
 
 @media only screen and (max-width: 852px) {
   .content-panel {
     padding: 2rem;
   }
 }
+
+@media (max-width: 900px) {
+  h3,h4,h5,h6 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .content-panel {
+    padding: 2rem;
+  }
+  
+  .content-border {
+    left: 40px;
+    right: 40px;
+    top: 60px;
+    bottom: 60px;
+  }
+
+}
+
+@media (min-width: 990px) {
+  header.masthead {
+    height: 100vh;
+  }
+  
+  header.masthead h1 {
+    font-size: 2rem;
+  }
+  
+}
+
+@media (min-width: 1200px) {
+  header.masthead h1 {
+    font-size: 3rem;
+  }
+  
+}
+
+
 
