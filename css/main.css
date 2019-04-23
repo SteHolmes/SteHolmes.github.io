@@ -178,7 +178,7 @@ header.masthead p {
 .line {
   width: 0;
   height: 265px;
-  border-left: 1px solid black;
+  border-left: 1px solid #000;
   position: absolute;
   top: 100%;
   display: block;
@@ -228,20 +228,6 @@ header.masthead p {
   padding: 5rem;
 }
 
-/*.projects-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(https://images.unsplash.com/photo-1513042966058-0ac1891fdc2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80);
-  background-position: center center;
-  background-size: cover;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  z-index: -2;
- }*/
-
 section:nth-child(odd) {
   background-color: #EDEAE5; 
 }
@@ -279,10 +265,14 @@ section.experience .content-border {
 
 section.experience .experience-text {
   font-size: 0.8em;
-  background-color: #FCB830;
   color: #fff;
   margin: 0;
   padding: 80px;
+  z-index: 2;
+}
+
+section.experience .yellow-bg {
+  background-color: #FCB830;
 }
 
 section.experience .profile {
@@ -351,7 +341,6 @@ section.contact .form-content input {
   width: 100%;
   margin: 10px;
   padding: 5px;
-  border: 1px solid #020202;
 }
 
 section.contact .form-content textarea {
@@ -360,7 +349,6 @@ section.contact .form-content textarea {
   height: 200px;
   margin: 10px;
   padding: 5px;
-  border: 1px solid #020202;
 }
 
 section.contact .form-content button {
