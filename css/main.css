@@ -27,7 +27,7 @@ h4 {
 }
 
 p {
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 
 ul {
@@ -54,7 +54,7 @@ i:hover {
   z-index: 1;
 }
 
-.txt-panel {
+.color-panel {
   color: #fff;
   margin: 0;
   padding: 80px;
@@ -356,13 +356,13 @@ section.contact .form-content .btn-primary:hover {
 
 footer {
   background-color: #fff;
-  padding: 2rem;
+  padding: 2em;
   border-top: 1px solid #e5e5e5;
 }
 
 footer i {
   padding: 0 5px;
-  font-size: 1.5rem;
+  font-size: 1.5em;
   cursor: pointer;
 }
 
@@ -379,6 +379,11 @@ footer i {
     height: 220px;
   }
   
+  section {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
   .content-panel {
     padding: 1rem;
   }
@@ -393,6 +398,11 @@ footer i {
   section.experience .experience-text {
     padding: 40px;
   }
+  
+  p, li {
+    font-size: 1.2em;
+  }
+
 }
 
 @media (min-width: 768px) {
