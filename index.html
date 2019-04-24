@@ -35,7 +35,7 @@
               </button>
           </div>
       </div>
-      <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+      <div class="collapse navbar-collapse flex-grow-1 text-center" id="myNavbar">
           <ul class="navbar-nav ml-auto flex-nowrap">
               <li class="nav-item about">
                   <a href="#about" class="nav-link m-2 menu-item">About</a>
@@ -238,14 +238,14 @@
         <div class="col-lg-6 col-sm-12 contact-form">
           
           <div class="form-content">
-            <form>
+            <form method="post" action="mailto:steveholmesart@outlook.com" enctype="text/plain">
               <h3>GET IN TOUCH</h3>
-              <input type="text" placeholder="Name">
-              <input type="text" placeholder="Company">
-              <input type="text" placeholder="Email">
-              <textarea type="text" placeholder="Message"></textarea>
+              <input type="text" name="name" placeholder="Name">
+              <input type="text" name ="company" placeholder="Company">
+              <input type="text" name="email" placeholder="Email">
+              <textarea type="text" name="message" placeholder="Message"></textarea>
               <div class="text-right">
-                <button type="submit" class="btn btn-primary btn-xl">Send</button>
+                <input type="submit" value="Send" class="btn btn-primary btn-xl">
               </div>
             </form>
           </div>
