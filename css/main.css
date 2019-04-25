@@ -302,6 +302,12 @@ section.contact .aqua-bg {
   background-color: #30B9C1;
 }
 
+section.contact .email-link {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 section.contact i {
   margin: 0 20px;
 }
