@@ -87,7 +87,7 @@
 }
 
 .projects-gallery div.item p {
-  padding: 10px;
+  padding: 10px 20px;
   font-size: 0.9em;
 }
 
@@ -95,10 +95,6 @@
   padding-bottom: 0;
   font-size: 1.1em;
   font-weight: bold;
-}
-
-.projects-gallery .proj-desc {
-  padding: 5px;
 }
 
 .projects-gallery .proj-desc span {
