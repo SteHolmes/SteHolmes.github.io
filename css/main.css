@@ -99,6 +99,7 @@ nav {
   width: 100%;
   z-index: 2;
   -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   background-color: #ffffff;
 }
@@ -119,6 +120,7 @@ nav {
 
 .nav-link, .navbar-brand {
   -webkit-transition: color 0.5s; 
+  -o-transition: color 0.5s; 
   transition: color 0.5s;
   }
 
@@ -148,7 +150,8 @@ nav {
   background-repeat: no-repeat;
   z-index: -2;
   opacity: 0;
-  animation: fade-in 1.2s linear 1.2s forwards;
+  -webkit-animation: fade-in 1.2s linear 1.2s forwards;
+          animation: fade-in 1.2s linear 1.2s forwards;
 }
 
 header.masthead {
@@ -165,16 +168,32 @@ header.masthead .main-title {
   margin: auto;
   color: #000;
   border: 1px solid #000;
-  transform: scaleX(0);
-  animation: expand 0.6s linear 0.3s forwards;
+  -webkit-transform: scaleX(0);
+      -ms-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-animation: expand 0.6s linear 0.3s forwards;
+          animation: expand 0.6s linear 0.3s forwards;
+}
+
+@-webkit-keyframes expand {
+  0% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
 }
 
 @keyframes expand {
   0% {
-    transform: scaleX(0);
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
   }
   100% {
-    transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
   }
 }
 
@@ -190,7 +209,17 @@ header.masthead h3 {
 
 .main-title h1, h3, a {
   opacity: 0;
-  animation: fade-in 1.2s linear 1.2s forwards;
+  -webkit-animation: fade-in 1.2s linear 1.2s forwards;
+          animation: fade-in 1.2s linear 1.2s forwards;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fade-in {
@@ -216,17 +245,35 @@ header.masthead p {
   left: 0;
   right: 0;
   margin: 0px auto;
-  transform: scaleY(0);
-  transform-origin: top;
-  animation: draw 0.6s linear 0.5s forwards;
+  -webkit-transform: scaleY(0);
+      -ms-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+      -ms-transform-origin: top;
+          transform-origin: top;
+  -webkit-animation: draw 0.6s linear 0.5s forwards;
+          animation: draw 0.6s linear 0.5s forwards;
+}
+
+@-webkit-keyframes draw {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
 }
 
 @keyframes draw {
   0% {
-    transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
   }
   100% {
-    transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 
@@ -424,6 +471,5 @@ footer i {
   }
   
 }
-
 
 
