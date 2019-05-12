@@ -104,33 +104,22 @@ nav {
   background-color: #ffffff;
 }
 
-.navbar-brand {
-  padding: 2px 8px;
-}
-
-.navbar-brand .fa-bolt {
-  position: absolute;
-  top: 29px;
-  padding-left: 5px;
-}
-
-.nav-link, .navbar-brand {
+nav .navbar-brand {
   -webkit-transition: color 0.5s; 
   -o-transition: color 0.5s; 
   transition: color 0.5s;
-  }
-
-.nav-link:hover {
-  color: #EDEAE5;
 }
 
-.navbar-brand:hover {
-  color: #EDEAE5;
+nav .navbar-brand .fa-bolt {
+  position: absolute;
+  top: 27px;
+  padding-left: 5px;
 }
 
-.nav-active {
-  color: #EDEAE5;
+nav .navbar-toggler {
+  font-size: 1.5rem;
 }
+
 
 /* HEADER/MASTHEAD SECTION */
 
@@ -204,7 +193,7 @@ header.masthead h3 {
   text-transform: uppercase;
 }
 
-.main-title h1, h3, a {
+.main-title h1, .main-title h3, .main-title a, nav a, nav i {
   opacity: 0;
   -webkit-animation: fade-in 1.2s linear 1.2s forwards;
           animation: fade-in 1.2s linear 1.2s forwards;
@@ -382,6 +371,7 @@ footer i {
 /* MEDIA QUERIES */
 
 @media (max-width: 700px) {
+  
   .hero-image {
     background-position: top;
   }
@@ -417,13 +407,17 @@ footer i {
 }
 
 @media (min-width: 768px) {
+  
   header.masthead p {
     font-size: 1.15rem;
   }
-  
 }
 
 @media only screen and (max-width: 852px) {
+  nav a, nav i {
+    opacity: 1;
+    animation-duration: fade-in 0;
+  }
   .content-panel {
     padding: 2rem;
   }
@@ -452,6 +446,7 @@ footer i {
 }
 
 @media (min-width: 990px) {
+  
   header.masthead {
     height: 100vh;
   }
