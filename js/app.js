@@ -10,6 +10,7 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: $("#" + id).offset().top -20
       }, 1000);
+    $(".navbar-collapse").removeClass("show");
   }
   
 // TOP NAV BACKGROUND COLOUR FUNCTION // 
