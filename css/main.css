@@ -54,6 +54,16 @@ i:hover {
   z-index: 1;
 }
 
+.logo {
+  display: inline;
+  width: 60px;
+  height: auto;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
 .color-panel {
   color: #fff;
   margin: 0;
@@ -105,15 +115,11 @@ nav {
 }
 
 nav .navbar-brand {
-  -webkit-transition: color 0.5s; 
-  -o-transition: color 0.5s; 
-  transition: color 0.5s;
+  max-width: 100px;
 }
 
-nav .navbar-brand .fa-bolt {
-  position: absolute;
-  top: 27px;
-  padding-left: 5px;
+nav .nav-item {
+  display: none;
 }
 
 nav .navbar-toggler {
@@ -193,7 +199,7 @@ header.masthead h3 {
   text-transform: uppercase;
 }
 
-.main-title h1, .main-title h3, .main-title a, nav a, nav i {
+.main-title h1, .main-title h3, .main-title a {
   opacity: 0;
   -webkit-animation: fade-in 1.2s linear 1.2s forwards;
           animation: fade-in 1.2s linear 1.2s forwards;

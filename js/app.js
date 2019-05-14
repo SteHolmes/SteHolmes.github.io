@@ -1,7 +1,8 @@
 $(document).ready(function(){
-
+  $(".nav-item").fadeIn(1000);
 
 // TOP NAV MENU SCROLLING FUNCTION //
+
 
   $(".about").click(function() {
       $('html, body').animate({
@@ -23,8 +24,7 @@ $(document).ready(function(){
         scrollTop: $("#contact").offset().top
       }, 1000);
   });
-
-
+  
 // TOP NAV BACKGROUND COLOUR FUNCTION // 
 
   $(window).scroll(function () { 
