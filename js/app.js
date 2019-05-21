@@ -4,6 +4,8 @@ $(document).ready(function(){
 // TOP NAV MENU SCROLLING FUNCTION //
 
   $("nav a").click(scroll);
+  $(".experience .projects").click(scroll);
+  $("header .contact").click(scroll);
   
   function scroll() {
     var id = $(this).text().toLowerCase();
