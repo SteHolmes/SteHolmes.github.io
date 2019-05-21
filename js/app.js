@@ -2,15 +2,17 @@ $(document).ready(function(){
   $(".nav-item").fadeIn(1000);
 
 // CLICK EVENTS //
-  $("nav a").click(scroll($(this).text().toLowerCase()));
-  $(".contact-btn").click(scroll("contact"));
-  $(".projects-btn").click(scroll("projects"));
+ 
+  $("nav a").click(scroll);
+  $(".contact-btn").click(scroll);
+  $(".projects-btn").click(scroll);
   
   
 // SCROLLING FUNCTION //
-  function scroll(id) {
+  function scroll() {
+    var id = $(this)[0].hash.toLowerCase();
     $('html, body').animate({
-        scrollTop: $("#" + id).offset().top -20
+        scrollTop: $(id).offset().top -20
       }, 1000);
     $(".navbar-collapse").removeClass("show");
   }
