@@ -1,22 +1,22 @@
 $(document).ready(function(){
   $(".nav-item").fadeIn(1000);
 
-// TOP NAV MENU SCROLLING FUNCTION //
-
-  $("nav a").click(scroll);
-  $(".experience .projects").click(scroll);
-  $("header .contact").click(scroll);
+// CLICK EVENTS //
+  $("nav a").click(scroll($(this).text().toLowerCase()));
+  $(".contact-btn").click(scroll("contact"));
+  $(".projects-btn").click(scroll("projects"));
   
-  function scroll() {
-    var id = $(this).text().toLowerCase();
+  
+// SCROLLING FUNCTION //
+  function scroll(id) {
     $('html, body').animate({
         scrollTop: $("#" + id).offset().top -20
       }, 1000);
     $(".navbar-collapse").removeClass("show");
   }
   
+  
 // TOP NAV BACKGROUND COLOUR FUNCTION // 
-
   $(window).scroll(function () { 
       if ($(window).scrollTop() > 1) {
         $('nav').css({'box-shadow': '0px 1px 2px #bcbaba'});
